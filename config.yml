@@ -1,0 +1,26 @@
+# SU / Developmentt
+development:
+ password: 2d6fca23dd336231eee82f73c19a393c
+ theme_id: "80570089534"
+ store: casadenim.myshopify.com
+ directory: ../shopify/
+ ignore_files:
+   - config/settings_data.json
+
+# Production Store (Staging)
+staging:
+  password: 2d6fca23dd336231eee82f73c19a393c
+  theme_id: "80570089534"
+  store: casadenim.myshopify.com
+  directory: ../shopify/
+  ignore_files:
+    - config/settings_data.json
+
+# Production Store (Master)
+production:
+  password: 2d6fca23dd336231eee82f73c19a393c
+  theme_id: "80570089534"
+  store: casadenim.myshopify.com
+  directory: ../shopify/
+  ignore_files:
+    - config/settings_data.json

@@ -1,0 +1,13 @@
+.btn{
+    color:$color-main;
+    letter-spacing: 1px;
+    background: $color-alt;
+    text-transform: uppercase;
+    &.btn-white{
+        background: #FFF;
+        &:hover{
+            color: #FFF;
+            background: $color-main;
+        }
+    }
+}

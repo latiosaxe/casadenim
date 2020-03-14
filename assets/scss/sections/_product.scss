@@ -1,0 +1,108 @@
+.product-item__image--margins {
+    margin: 0;
+}
+.product__type {
+    margin-bottom: 5px;
+}
+.product__details {
+    margin: 120px 0;
+    .grid {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1200px;
+        justify-content: space-between;
+        &.jsc {
+            justify-content: center;
+        }
+        .grid__item {
+            width: 52%;
+            h1 {
+                font-size: 48px;
+            }
+            .product__meta {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: flex-end;
+                justify-content: space-between;
+                .product__price{
+                    margin-bottom: 0;
+                    font-weight: bold;
+                }
+                &__size {
+                    max-width: 250px;
+                    p{
+                        cursor: pointer;
+                        margin-bottom: 10px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .btn--add-to-cart {
+                color: #FFF;
+                background: $color-main;
+            }
+            &:last-of-type {
+                width: 40%;
+            }
+        }
+        
+    }
+}
+
+.product__shipping {
+    opacity: 0.7;
+    margin: 15px 0 0;
+}
+
+.product__sizes {
+    width: 100%;
+    float: left;
+    padding: 50px 0;
+    color: $color-main;
+    background-color: $color-alt;
+    h4 {
+        font-size: 32px;
+    }
+    .grid__item__table {
+        width: 100%;
+        // max-width: 800px;
+        table {
+            tr{
+                td, th{
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid $color-main;
+                    &:first-of-type{
+                        text-align: left;
+                    }
+                }
+            }
+            thead {
+                tr {
+                    th{
+                        border: none;
+                        &:nth-of-type(1){
+                            text-transform: uppercase;
+                        }
+                        &:nth-of-type(1), &:nth-of-type(2) {
+                            border: 1px solid $color-main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__footer{
+        font-size: 22px;
+        margin-top: 20px;
+        text-align: right;
+        font-family: $font-alt;
+        p {
+            a { 
+                text-decoration: underline;
+            }
+        }
+    }
+}

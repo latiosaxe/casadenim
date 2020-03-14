@@ -1,0 +1,83 @@
+{% if section.settings.image != blank %}
+<div class="feature-row-full" data-section-id="{{ section.id }}" data-section-type="custom-html-section" style="background-image: url( {{ section.settings.image | img_url: 'master' }} )"  data-aos="fade-up">
+  {% if section.settings.title != blank %}
+  <h1 class="feature-row-full__title">{{ section.settings.title | escape }}</h1>
+  <!-- <svg viewBox="0 0 800 600">
+    <symbol id="s-text">
+      <text text-anchor="middle"
+            x="50%"
+            y="50%"
+            class="text--line" >
+        {{ section.settings.title | escape }}
+      </text>
+    </symbol>
+    <g class="g-ants">
+      <use xlink:href="#s-text"
+        class="text-copy"></use>     
+      <use xlink:href="#s-text"
+        class="text-copy"></use>     
+      <use xlink:href="#s-text"
+        class="text-copy"></use>     
+      <use xlink:href="#s-text"
+        class="text-copy"></use>     
+      <use xlink:href="#s-text"
+        class="text-copy"></use>     
+    </g>
+  </svg> -->
+  {% if section.settings.title != blank %}
+    <p class="feature-row-full__description">{{ section.settings.description | escape }}</p>
+  {% endif %}
+  <div class="feature-row-full__background"></div>
+  {% endif %}
+  <!-- <p class="feature-row-full__title"></p> -->
+</div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Image full Width",
+    "es": "Imagen 100% ancho"
+  },
+  "class": "index-section image-with-text-full",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "en": "Image",
+        "es": "Imagen"
+      }
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading",
+        "es": "Título"
+      }
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": {
+        "en": "Description",
+        "es": "Descripción"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Image full Width",
+        "es": "Imagen 100% ancho"
+      },
+      "category": {
+        "en": "Image",
+        "es": "Imagen"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,23 @@
+.selector-wrapper, .quantity-wrapper {
+    font-size: 18px;
+    border-color: $color-main;
+    padding: 14px 4px 14px 31px;
+}
+
+
+.search-bar__input {
+    color: $color-main;
+    &::-webkit-input-placeholder { /* Edge */
+        color: $color-main;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $color-main;
+    }
+    &::placeholder {
+        color: $color-main;
+    }
+}
+
+.search-bar__icon-button, .site-header__link, .drawer-nav__item a, .drawer-nav__toggle button{
+    color: $color-main;
+}

@@ -1,0 +1,28 @@
+.guide_step{
+    display: flex;
+    align-items: center;
+    margin: 0 -15px 40px;
+    justify-content: space-between;
+    img {
+        margin: 15px !important;
+        max-width: 100%;
+    }
+    &__instructions {
+        margin: 15px;
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.block{
+        display: block;
+        max-width: 680px;
+        text-align: center;
+        margin: 0 auto 40px;
+    }
+}
+
+.page-width, .page-width--wide{
+    max-width: 840px;
+}
