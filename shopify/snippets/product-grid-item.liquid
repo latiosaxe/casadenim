@@ -40,19 +40,19 @@
               {%- assign size = false -%}
               {%- assign type = false -%}
               {%- for tag in product.tags -%}
-                {% if tag == 'Slim' or tag == 'Skinny' or tag == 'Slim Straight' or tag == 'Relaxed Tapered' or tag == 'Straight' or tag == 'Thin Finn' %}
+                {% if tag == 'Slim' or tag == 'Skinny' or tag == 'Slim Straight' or tag == 'Relaxed Tapered' or tag == 'Straight' or tag == 'Thin Finn' or tag == 'Lean Dean' %}
                   {%- assign size = tag -%}
                 {% endif %}
                 {% if tag == 'Selvedge' or tag == 'Pre Washed/Comfort' or tag == 'Índigo'%}
                   {%- assign type = tag -%}
-                {% endif %}
+                {% endif %} 
               {%- endfor -%}
 
               <p class="product-item__description__type">{{ product.type }}</p>
 
               <div class="product-item__description__meta">
                 {% if size %}
-                <p><strong>Tamaño:</strong> {{ size }}</p>
+                <p><strong>Fit:</strong> {{ size }}</p>
                 {% endif %}
               </div>
               <div class="product-item__description__meta">

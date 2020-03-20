@@ -69,7 +69,7 @@
     <p class="collection_categories__wrapper__title">Filtrar por:</p>
     <div class="collection_categories__wrapper__list">
     {%- for tag in collection.all_tags -%}
-      {% if tag == 'Slim' or tag == 'Skinny' or tag == 'Slim Straight' or tag == 'Relaxed Tapered' or tag == 'Straight' or tag == 'Thin Finn' %}
+      {% if tag == 'Slim' or tag == 'Skinny' or tag == 'Slim Straight' or tag == 'Relaxed Tapered' or tag == 'Straight' or tag == 'Thin Finn' or tag == 'Lean Dean' %}
         {%- assign new_url = tag | link_to_tag: tag | split: 'href="' | last | split: '"' | first -%}
         <a href="{{ new_url }}" {% if current_tags contains tag %} class="selected"{% endif %}>
           <p>{{ tag }}</p>
