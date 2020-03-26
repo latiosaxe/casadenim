@@ -4,10 +4,17 @@
     right: 0;
     z-index: 99;
     position: fixed;
+    .site-header__logo {
+        a{
+            height: 30px;
+        }
+    }
     svg{
+        height: 30px;
+        color: $color-main;
         g{
             use{
-                fill: $color-main;
+                color: $color-main;
             }
         }
     }
@@ -18,9 +25,10 @@
       color: #FFF;
     }
     svg{
+        color: #FFF;
         g{
             use{
-                fill: #FFF;
+                color: #FFF;
             }
         }
     }
@@ -32,9 +40,10 @@
                 color: $color-main;
             }
             svg{
+                color: $color-main;
                 g{
                     use{
-                        fill: $color-main;
+                        color: $color-main;
                     }
                 }
             }

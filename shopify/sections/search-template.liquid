@@ -16,7 +16,7 @@
     {% endif %}
   {% else %}
     {% assign product_count = shop.products_count %}
-    <h1 class="search-title search-title--form h2">{{ 'general.search.title' | t: count: product_count }}</h1>
+    <h1 class="search-title search-title--form h2">¿Qué estás buscando?</h1>
     <hr class="hr--clear">
       <div class="text-center">
         <form action="{{ routes.search_url }}" method="get" role="search">

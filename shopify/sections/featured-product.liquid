@@ -67,7 +67,7 @@
                 {% else %}
                   <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
                   <span class="product__price--reg js-price">
-                    {{ price }}
+                    {{ price | money_with_currency }}
                   </span>
                 {% endif %}
                 {% include 'product-unit-price', variant: current_variant %}

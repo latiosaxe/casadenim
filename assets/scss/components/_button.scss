@@ -10,4 +10,13 @@
             background: $color-main;
         }
     }
+    &.btn-transparent{
+        color: white;
+        background: none;
+        border: 1px solid white;
+        &:hover{
+            color: #FFF;
+            background: $color-main;
+        }
+    }    
 }
