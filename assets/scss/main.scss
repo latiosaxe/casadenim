@@ -14,6 +14,7 @@
 @import 'sections/product';
 @import 'sections/contact';
 @import 'sections/faqs';
+@import 'sections/pages';
 
 
 .brands_grid{
@@ -69,4 +70,8 @@ hr {
     width: 100%;
     height: 1px;
     background: $color-main;
+}
+
+#preview-bar-iframe {
+    height: 60px;
 }

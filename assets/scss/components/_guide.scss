@@ -1,26 +1,37 @@
 .guide_step{
     display: flex;
     align-items: center;
-    margin: 0 -15px 40px;
-    justify-content: space-between;
+    margin: 0 -15px 180px;
+    justify-content: center;
     img {
         margin: 15px !important;
         max-width: 100%;
     }
     &__instructions {
         margin: 15px;
+        font-size: 25px;
+        max-width: 410px;
         p {
             &:last-of-type {
                 margin-bottom: 0;
             }
         }
+        .title {
+            font-size: 28px;
+        }
     }
-    &.block{
-        display: block;
-        max-width: 680px;
-        text-align: center;
-        margin: 0 auto 40px;
+    &.horizontal {
+        padding: 0 !important;
+        .guide_step__instructions {
+            // max-width: inherit;
+        }
     }
+    // &.block{
+    //     display: block;
+    //     max-width: 680px;
+    //     text-align: center;
+    //     margin: 0 auto 40px;
+    // }
 }
 
 .page-width{

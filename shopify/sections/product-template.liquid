@@ -85,7 +85,7 @@
                   <img src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
                 </noscript>
                 {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-                <div class="product__photo--single" style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+                <div class="product__photo--single product-item__image-wrapper">
                   <img class="lazyload"
                     src="{{ image | img_url: '300x' }}"
                     data-src="{{ img_url }}"
@@ -127,7 +127,10 @@
       <div class="container">
         <div class="grid jsc">
           <div class="grid__item__table">
-            <h4>Guía de tallas</h4>
+            <div class="relative">
+              <h4>Guía de tallas</h4>
+              <span id="hideSizes" class="absolute-right">Cerrar</span>
+            </div>
           {% for tag in product.tags %}
             {% if tag == 'tabla:1' %}
               {% assign hasTable = true %}
@@ -332,7 +335,7 @@
           <img src="{{ duplicate_image | img_url: '2048x2048' }}" alt="{{ duplicate_image.alt | escape }}">
         </noscript>
         {% assign img_url = duplicate_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-        <div class="product__photo--single" style="padding-top:{{ 1 | divided_by: duplicate_image.aspect_ratio | times: 100}}%;">
+        <div class="product__photo--single product-item__image-wrapper">
           <img class="lazyload"
             src="{{ duplicate_image | img_url: '300x' }}"
             data-src="{{ img_url }}"
@@ -356,7 +359,7 @@
                 <img src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
               </noscript>
               {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-              <div class="product__photo--single" style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+              <div class="product__photo--single product-item__image-wrapper">
                 <img class="lazyload"
                   src="{{ image | img_url: '300x' }}"
                   data-src="{{ img_url }}"

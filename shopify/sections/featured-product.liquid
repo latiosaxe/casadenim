@@ -135,7 +135,7 @@
             {% if product.images.size > 1 %}
               fade-in
               {% unless featured_image == image %} hide{% endunless %}
-            {% endif %}" style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+            {% endif %}" style="padding-top: {{ 1 | divided_by: image.aspect_ratio | times: 100 }}%;">
               <img id="ProductImage-{{ image.id }}"
                 class="product__photo--variant lazyload"
                 src="{{ image | img_url: '300x' }}"

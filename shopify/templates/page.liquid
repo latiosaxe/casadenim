@@ -1,10 +1,19 @@
 <!-- /templates/page.liquid -->
+<!-- /templates/page.contact.liquid -->
+<div class="bg-primary">
+  <div class="page-width--wide page-container">
+    <div class="contact">
 
-<div class="page-width page-container">
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-  <div class="rte rte--indented-images">
-    {{ page.content }}
+      <div class="contact__image" style="background-image: url('{% if page.metafields.data.image != blank%}{{page.metafields.data.image}}{% else  %}https://instagram.fmex7-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/89387663_515583209384362_2128322310043305966_n.jpg?_nc_ht=instagram.fmex7-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=_B4xHJx8QHEAX-C50PG&oh=0d92754d2435f4b85f69f06bc2ffa67c&oe=5EA3E432{% endif %}')">
+
+      </div>
+      <div class="contact__form">
+        <div class="contact-form form-vertical">
+          <h1 class="white">{{ page.title }}</h1>
+          
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
   </div>
 </div>

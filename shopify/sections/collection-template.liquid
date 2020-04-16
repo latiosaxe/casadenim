@@ -31,7 +31,7 @@
   </div>
 {% endif %} -->
 
-
+{% comment %}
 {%- if section.settings.collection_sort_enable or section.settings.collection_tags_enable -%}
   <div class="action-bar-secondary">    
     {%- if section.settings.collection_sort_enable and collection.products.size > 1 -%}
@@ -46,8 +46,7 @@
     {%- endif -%}
   </div>
 {%- endif -%}
-
-
+ 
 {%- if section.settings.collection_tags_enable and collection.all_tags.size > 1 -%}
 <!-- <div class="action-bar-secondary__dropdown action-bar-secondary--left">
   <label for="SortTags" class="label--hidden">{{ 'collections.general.tags' | t }}</label>
@@ -63,9 +62,10 @@
     {%- endfor -%}
   </select>
 </div> -->
+
 <div class="collection_categories__helper">
   <div class="collection_categories">
-  <div class="collection_categories__wrapper">
+  <div class="collection_categories__wrapper" style="display: none;">
     <p class="collection_categories__wrapper__title">Filtrar por:</p>
     <div class="collection_categories__wrapper__list">
     {%- for tag in collection.all_tags -%}
@@ -80,7 +80,6 @@
     </div>
   </div>
 </div>
-{% comment %}
   <select name="SortTags" id="SortTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
     {%- if current_tags -%}
       <option value="{{ collection.url }}">{{ 'collections.general.all_tags' | t }}</option>
@@ -92,10 +91,10 @@
       <option value="{{ new_url }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
     {%- endfor -%}
   </select>
-{% endcomment %}
 </div>
 {%- endif -%}
 
+{% endcomment %}
 
 {% comment %}
   Set grid item widths based on settings
@@ -103,7 +102,7 @@
 
 {% include 'product-grid-width' with product_image_type: section.settings.product_image_type, product_image_size: section.settings.product_image_size %}
 
-<div class="grid collection-grid grid--uniform grid--no-gutters" data-section-id="{{ section.id }}" data-section-type="collection-template-section" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tags_enable }}">
+<div class="grid grid-flex collection-grid grid--uniform grid--no-gutters" data-section-id="{{ section.id }}" data-section-type="collection-template-section" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tags_enable }}">
   {% for product in collection.products %}
     {% assign price = product.price | money_without_trailing_zeros %}
     {% include 'product-grid-item' with product_image_spacing: section.settings.product_image_spacing, vendor_enable: section.settings.vendor_enable %}

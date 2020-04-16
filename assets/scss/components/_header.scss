@@ -24,11 +24,14 @@
     .site-header__logo-link {
       color: #FFF;
     }
-    svg{
-        color: #FFF;
-        g{
-            use{
-                color: #FFF;
+    .site-header__logo {
+        svg {
+            opacity: 0;
+            color: #FFF;
+            g {
+                use {
+                    color: #FFF;
+                }
             }
         }
     }
@@ -40,6 +43,7 @@
                 color: $color-main;
             }
             svg{
+                opacity: 1;
                 color: $color-main;
                 g{
                     use{

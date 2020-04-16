@@ -20,3 +20,13 @@
         }
     }    
 }
+
+.btn:hover {
+    color: $color-alt;
+    background: $color-main;
+}
+.feature-row.inverted {
+    .btn:hover {
+        border: 1px solid $color-alt;
+    }   
+}

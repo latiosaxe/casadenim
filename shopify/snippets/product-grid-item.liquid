@@ -10,7 +10,8 @@
         </noscript>
         <!-- style="max-width: {{ 600 | times: product.featured_image.aspect_ratio | round }}px;"  -->
         <div class="product-item__image-container product-item__image-container--loading" data-image-with-placeholder-wrapper>
-          <div class="product-item__image-wrapper" style="padding-top:{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%">
+          <!-- style="padding-top:{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%" -->
+          <div class="product-item__image-wrapper">
             {% assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
             <img class="product-item__image lazyload"
               alt="{{ product.featured_image.alt | escape }}"

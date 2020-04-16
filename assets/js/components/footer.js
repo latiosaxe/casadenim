@@ -51,3 +51,7 @@ $("#showSizes").on('click', function(){
     $(".product__sizes").slideDown();
     $("html, body").animate({ scrollTop: $(".product__sizes").offset().top - $(".site-header").height() }, 300);
 })
+
+$("#hideSizes").on('click', function(){
+    $(".product__sizes").slideUp();
+})

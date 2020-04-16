@@ -1,22 +1,22 @@
-<div class="rich-text page-width" data-section-id="{{ section.id }}" data-section-type="rich-text-section"  data-aos="fade-up">
-  <div class="grid">
-    <div class="grid__item rte text-center{% unless section.settings.home_page_full_width %} medium-up--two-thirds medium-up--push-one-sixth{% endunless %}">
-      {% if section.settings.section_icon == "icon_1" %}
-      <img class="rich-text__icon" src="{{ 'icon_1.svg' | asset_url }}" alt="Algodón">
-      {% endif %}
-      {% if section.settings.section_title != blank %}
-        <h2 class="rich-text__heading{% if section.settings.text_size == 'large' %} h1{% elsif section.settings.text_size == 'small' %} h3{% endif %}">{{ section.settings.section_title | escape }}</h2>
-      {% endif %}
-      {% if section.settings.text != blank %}
-        <div class="rich-text__text--{{ section.settings.text_size }}">
-          {{ section.settings.text }}
-        </div>
-      {% endif %}
+<div class="bg-primary">
+  <div class="rich-text page-width" data-section-id="{{ section.id }}" data-section-type="rich-text-section"  data-aos="fade-up">
+    <div class="grid">
+      <div class="grid__item rte text-center{% unless section.settings.home_page_full_width %} medium-up--two-thirds medium-up--push-one-sixth{% endunless %}">
+        {% if section.settings.section_icon == "icon_1" %}
+        <img class="rich-text__icon" style="margin: 0 auto;" src="{{ 'icon_1--white.svg' | asset_url }}" alt="Algodón">
+        {% endif %}
+        {% if section.settings.section_title != blank %}
+          <h2 class="color-white rich-text__heading{% if section.settings.text_size == 'large' %} h1{% elsif section.settings.text_size == 'small' %} h3{% endif %}">{{ section.settings.section_title | escape }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="rich-text__text--{{ section.settings.text_size }}">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
-
-
 
 {% schema %}
 {

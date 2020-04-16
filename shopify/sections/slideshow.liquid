@@ -104,17 +104,49 @@
           {%- endif -%}
           <div class="hero__content-wrapper">
             <div class="hero__content">
-              <div class="hero__content-centered {{ block.settings.content_position}}">
+              <div class="hero__content-centered {{ block.settings.content_position}}" data-text="{{ block.settings.hero_title }}">
+                {%- if block.settings.brand_logo == 'nudie-jeans' -%}
+                  <div class="hero-brand-logo"><img src="{{ 'Nudie_Jeans_logo_wordmark-1024x165_160x160@2x--white.png' | asset_url }}" alt="Nudie Jeans"></div>
+                {%- elsif block.settings.brand_logo == 'companion-denim'-%}
+                  <div class="hero-brand-logo"><img src="{{ 'companiondenim12_160x160@2x--white.png' | asset_url }}" alt="Companion Denim"></div>
+                {%- elsif block.settings.brand_logo == 'naked-and-famous'-%}
+                  <div class="hero-brand-logo"><img src="{{ 'NF_Copy_160x160@2x--white.png' | asset_url }}" alt="Naked and Famous"></div>
+                {%- elsif block.settings.brand_logo == 'kings-of-indigo'-%}
+                  <div class="hero-brand-logo"><img src="{{ 'KOI_Copy_160x160@2x--white.png' | asset_url }}" alt="Kings of Indigo"></div>
+                {%- endif -%}
+
                 {%- unless block.settings.hero_title == blank -%}
-                  <h1 class="hero__text-title" itemscope itemtype="http://schema.org/Organization">
-                    {{ block.settings.hero_title | escape }}
-                  </h1>
+                  {%- if block.settings.hero_title == 'CASA DENIM' -%}
+                    <p>
+                      <svg width="401px" height="50px" viewBox="0 0 618 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Azul" transform="translate(-651.000000, -450.000000)" fill="#fff">
+                                <g id="Group" transform="translate(651.137000, 450.957000)">
+                                    <path d="M50.278,66.525 C44.862,72.044 37.301,75.109 29.533,75.109 C21.766,75.109 14.511,72.554 8.993,67.036 C1.125,59.167 5.68434189e-14,49.459 5.68434189e-14,37.605 C5.68434189e-14,25.751 1.125,16.043 8.993,8.174 C14.511,2.656 21.766,0 29.533,0 C37.301,0 44.862,2.86 50.278,8.378 C54.467,12.67 56.614,18.394 57.227,24.116 L43.738,24.116 C43.431,20.947 42.307,18.7 40.467,16.452 C38.117,13.488 34.03,11.956 29.533,11.956 C25.343,11.956 21.257,13.692 18.394,16.758 C13.387,21.971 13.387,30.962 13.387,37.605 C13.387,44.248 13.387,53.24 18.394,58.452 C21.257,61.518 25.343,63.255 29.533,63.255 C34.03,63.255 38.117,61.62 40.467,58.656 C42.307,56.408 43.431,53.853 43.738,50.685 L57.227,50.685 C56.614,56.408 54.467,62.233 50.278,66.525" id="Fill-28"></path>
+                                    <path d="M93.514,17.474 L83.194,48.029 L103.837,48.029 L93.514,17.474 Z M112.625,73.781 L107.924,59.883 L79.106,59.883 L74.405,73.781 L61.12,73.781 L86.566,1.327 L100.974,1.327 L126.42,73.781 L112.625,73.781 L112.625,73.781 Z" id="Fill-29"></path>
+                                    <path d="M183.659,67.343 C178.14,72.861 169.659,75.109 160.768,75.109 C153.103,75.109 145.031,73.065 139.103,67.649 C134.811,63.766 131.542,57.635 131.542,50.788 L145.031,50.788 C145.031,54.365 146.666,57.532 148.811,59.678 C151.879,62.744 156.783,63.561 160.972,63.561 C165.98,63.561 170.783,62.539 173.543,59.678 C175.176,57.941 176.403,56.204 176.403,52.729 C176.403,47.415 172.316,44.962 167.82,44.145 C162.914,43.226 156.578,43.021 151.776,42.204 C141.761,40.568 133.382,34.028 133.382,21.971 C133.382,16.248 135.936,11.444 139.717,7.664 C144.519,2.962 152.491,0 160.972,0 C168.739,0 176.301,2.451 181.207,7.05 C185.499,11.137 188.462,16.452 188.564,22.481 L175.075,22.481 C174.972,19.926 173.645,17.167 171.907,15.328 C169.556,12.875 164.754,11.444 160.87,11.444 C156.783,11.444 152.082,12.364 149.119,15.43 C147.585,17.065 146.666,18.904 146.666,21.561 C146.666,26.262 149.731,28.714 154.024,29.43 C158.622,30.145 165.059,30.657 169.76,31.269 C180.593,32.803 189.688,39.853 189.688,52.219 C189.688,58.963 187.235,63.766 183.659,67.343" id="Fill-30"></path>
+                                    <path d="M227.509,17.474 L217.189,48.029 L237.832,48.029 L227.509,17.474 Z M246.62,73.781 L241.919,59.883 L213.102,59.883 L208.401,73.781 L195.116,73.781 L220.561,1.327 L234.969,1.327 L260.416,73.781 L246.62,73.781 L246.62,73.781 Z" id="Fill-31"></path>
+                                    <path d="M333.802,17.27 C331.349,14.816 327.774,13.182 323.583,13.182 L308.561,13.182 L308.561,61.927 L323.583,61.927 C327.774,61.927 331.349,60.291 333.802,57.839 C338.912,52.729 339.013,44.145 339.013,37.502 C339.013,30.86 338.912,22.378 333.802,17.27 Z M343.92,66.014 C339.116,71.022 331.861,73.781 323.583,73.781 L295.379,73.781 L295.379,1.327 L323.583,1.327 C331.861,1.327 339.116,4.086 343.92,9.093 C351.383,16.758 352.403,27.488 352.403,37.502 C352.403,47.518 351.383,58.35 343.92,66.014 L343.92,66.014 Z" id="Fill-32"></path>
+                                    <polyline id="Fill-33" points="367.843 73.781 367.843 1.327 419.453 1.327 419.453 13.284 381.023 13.284 381.023 30.145 414.853 30.145 414.853 41.999 381.023 41.999 381.023 61.824 419.453 61.824 419.453 73.781 367.843 73.781"></polyline>
+                                    <polyline id="Fill-34" points="478.933 73.781 447.563 24.014 447.563 73.781 434.583 73.781 434.583 1.327 448.583 1.327 479.543 50.378 479.543 1.327 492.523 1.327 492.523 73.781 478.933 73.781"></polyline>
+                                    <polygon id="Fill-35" points="512.053 73.781 525.443 73.781 525.443 1.327 512.053 1.327"></polygon>
+                                    <polyline id="Fill-36" points="604.953 73.781 604.953 22.072 586.153 72.759 576.443 72.759 557.743 21.459 557.743 73.781 544.963 73.781 544.963 1.327 562.743 1.327 581.753 52.934 600.863 1.327 617.723 1.327 617.723 73.781 604.953 73.781"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                      </svg>
+                    </p>
+                  {%- else -%}
+                    <h1 class="hero__text-title" itemscope itemtype="http://schema.org/Organization">
+                      {{ block.settings.hero_title | escape }}
+                    </h1>
+                  {%- endif -%}  
                 {%- endunless -%}
                 {%- unless block.settings.hero_description == blank -%}
-                <p class="hero__text-description">
-                  {{ block.settings.hero_description | escape }}
-                </p>
-              {%- endunless -%}
+                  <p class="hero__text-description">
+                    {{ block.settings.hero_description | escape }}
+                  </p>
+                {%- endunless -%}
                 
                 {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
                   <a href="{{ block.settings.button_link }}" class="btn btn-transparent">
@@ -463,6 +495,51 @@
                 "es": "Derecha"
               },
               "value": "Derecha"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "brand_logo",
+          "label": {
+            "en": "Brand Logo",
+            "es": "Imagen de Logo"
+          },
+          "options": [
+            {
+              "label": {
+                "en": "None",
+                "es": "Ninguno"
+              },
+              "value": "none"
+            },
+            {
+              "label": {
+                "en": "Nudie Jeans",
+                "es": "Nudie Jeans"
+              },
+              "value": "nudie-jeans"
+            },
+            {
+              "label": {
+                "en": "Companion Denim",
+                "es": "Companion Denim"
+              },
+              "value": "companion-denim"
+            },
+            {
+              "label": {
+                "en": "Naked and Famous",
+                "es": "Naked and Famous"
+              },
+              "value": "naked-and-famous"
+            },
+            {
+              "label": {
+                "en": "Kings of Indigo",
+                "es": "Kings of Indigo"
+              },
+              "value": "kings-of-indigo"
             }
           ]
         }
