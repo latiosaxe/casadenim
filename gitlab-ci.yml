@@ -1,0 +1,31 @@
+image: node:10.15.3
+
+stages:
+  - deploy_staging
+  - deploy_prod
+
+before_script:
+  - yarn install
+
+cache:
+  paths:
+    - node_modules/
+
+deploy_staging:
+  type: deploy_staging
+  script:
+    - yarn deploy --env="staging"
+  environment:
+    name: staging
+  only:
+    - master
+
+deploy_prod:
+  type: deploy_prod
+  script:
+    - yarn run deploy-prod --env="production"
+  environment:
+    name: production
+  when: manual
+  only:
+    - master

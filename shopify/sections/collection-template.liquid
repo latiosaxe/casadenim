@@ -5,7 +5,17 @@
 <div class="collection_hero">
   {% if collection.metafields.hero.imagen != blank %}
     <div class="collection_hero__image" style="background-image: url({{ collection.metafields.hero.imagen }}); {% if collection.metafields.hero.brand_color != blank %} border-color: {{ collection.metafields.hero.brand_color }}{% endif %} ">
+      {%- if collection.title == 'Nudie Jeans' -%}
+        <div class="hero-brand-logo width-wrap"><img src="{{ 'nudie-jeans_white.png' | file_img_url: 'x200' }}" alt="Nudie Jeans"></div>
+      {%- elsif collection.title == 'Companion Denim'-%}
+        <div class="hero-brand-logo width-wrap"><img src="{{ 'companion_white.png' | file_img_url: 'x200' }}" alt="Companion Denim"></div>
+      {%- elsif collection.title == 'Naked and Famous'-%}
+        <div class="hero-brand-logo width-wrap"><img src="{{ 'naked-and-famous_white.png' | file_img_url: 'x200' }}" alt="Naked and Famous"></div>
+      {%- elsif collection.title == 'Kings of Indigo'-%}
+        <div class="hero-brand-logo width-wrap"><img src="{{ 'koi_white.png' | file_img_url: 'x200' }}" alt="Kings of Indigo"></div>
+      {%- else -%}
       <h1>{{ collection.title }}</h1>
+      {%- endif -%}
     </div>
   {% endif %}
   {% if collection.metafields.hero.brand_description != blank %}

@@ -180,8 +180,17 @@
 }
 
 .hero-brand-logo {
-    // margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 15px;
     img {
-        display: inline
+        display: inline;
+        max-height: 100px;
+    }
+    &.width-wrap{
+        img {
+            max-width: 80%;
+            max-height: inherit;
+        }
     }
 }

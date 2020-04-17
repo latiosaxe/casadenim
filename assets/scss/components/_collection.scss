@@ -134,10 +134,11 @@
     }
 }
 
-.product-item__image-wrapper {
+.product-item__image-wrapper, .product__photo--variant-wrapper {
     padding-bottom: 133%;
+    padding-top: 0 !important;
 
-    .product-item__image, img {
+    .product-item__image, img, .product__photo--variant {
         bottom: 0;
         height: 100%;
         object-fit: cover;

@@ -35,33 +35,42 @@
             <p class="product-item__title">{{ product.title }}</p>
 
             <div class="product-item__description">
-              {% comment %}
-              {{ product.description }}
-              {% endcomment %}
-              {%- assign size = false -%}
-              {%- assign type = false -%}
+              {%- assign tela = false -%}
+              {%- assign fit = false -%}
+              {%- assign color = false -%}
               {%- for tag in product.tags -%}
-                {% if tag == 'Slim' or tag == 'Skinny' or tag == 'Slim Straight' or tag == 'Relaxed Tapered' or tag == 'Straight' or tag == 'Thin Finn' or tag == 'Lean Dean' %}
-                  {%- assign size = tag -%}
+                {% if tag contains 'tela:' %}
+                  {%- assign tela = tag | remove: 'tela:' -%}
                 {% endif %}
-                {% if tag == 'Selvedge' or tag == 'Pre Washed/Comfort' or tag == 'Índigo'%}
-                  {%- assign type = tag -%}
-                {% endif %} 
+                {% if tag contains 'fit:' %}
+                  {%- assign fit = tag | remove: 'fit:' -%}
+                {% endif %}
+                {% if tag contains 'color:' %}
+                  {%- assign color = tag | remove: 'color:' -%}
+                {% endif %}
               {%- endfor -%}
 
               <p class="product-item__description__type">{{ product.type }}</p>
 
               <div class="product-item__description__meta">
-                {% if size %}
-                <p><strong>Fit:</strong> {{ size }}</p>
+                {% if fit %}
+                <p><strong>Fit:</strong> {{ fit }}</p>
+                {% endif %}
+                {% if color %}
+                <p><strong>Color:</strong> {{ color }}</p>
+                {% endif %}
+                {% if tela %}
+                <p><strong>Mezclilla:</strong> {{ tela }}</p>
                 {% endif %}
               </div>
+              {% comment %}
               <div class="product-item__description__meta">
                 {% if type %}
                 <p><strong>Tipo de Mezclilla:</strong> {{ type }}</p>
                 {% endif %}
               </div>
-              
+              {% endcomment %}
+
             </div>
 
             {% comment %}
