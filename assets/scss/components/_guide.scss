@@ -3,14 +3,26 @@
     align-items: center;
     margin: 0 -15px 180px;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        margin: 0 0 40px;
+    }
+
     img {
         margin: 15px !important;
-        max-width: 100%;
+        max-width: 50%;
     }
     &__instructions {
         margin: 15px;
         font-size: 25px;
         max-width: 410px;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 16px;
+        }
+
         p {
             &:last-of-type {
                 margin-bottom: 0;
@@ -18,20 +30,42 @@
         }
         .title {
             font-size: 28px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+            }
         }
     }
     &.horizontal {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0 !important;
+        flex-direction: column;
+
         .guide_step__instructions {
             // max-width: inherit;
         }
+
+        &.first {
+            text-align: left;
+            justify-content: left;
+            align-items: flex-start;
+        }
+
+        &.second {
+            text-align: right;
+            justify-content: right;
+            align-items: flex-end;
+        }
+
+        @media screen and (max-width: 768px) {
+            img {
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
     }
-    // &.block{
-    //     display: block;
-    //     max-width: 680px;
-    //     text-align: center;
-    //     margin: 0 auto 40px;
-    // }
 }
 
 .page-width{

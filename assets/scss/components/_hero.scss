@@ -174,6 +174,13 @@
     }
 }
 
+.feature-row .feature-row__content {
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        padding: 30px 30px 40px;
+    }
+}
+
 .feature-row .feature-row__item img {
     max-height: 100vh;
     object-fit: cover;
@@ -192,5 +199,18 @@
             max-width: 80%;
             max-height: inherit;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero__content-wrapper {
+        svg {
+            max-width: 300px;
+            height: auto;
+        }
+    }
+
+    .hero .slick-track {
+        // max-width: 100% !important;
     }
 }

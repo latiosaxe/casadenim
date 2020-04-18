@@ -22,14 +22,45 @@
         color: $color-main;
         position: absolute;
     }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 0;
+
+        .product-item__title,
+        .product-item__description,
+        .product-item__description__meta,
+        .product-item__price-wrapper {
+            color: white
+        }
+
+        .product-item__description__meta {
+            text-align: left;
+        }
+
+        .product-item__price-wrapper {
+            right: 7px;
+            bottom: 7px;
+            font-weight: bold;
+        }
+    }
 }
 
-.product-item__meta{
+.product-item__meta {
     // bottom: 0;
     // height: 50%;
     // top: inherit;
     &:before{
         background-color: $color-alt;
+    }
+
+    @media screen and (max-width: 768px) {
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: left;
+        position: absolute;
+        background: rgba(0,0,0,0.2);
     }
 }
 .product-item__meta:hover:before, .product-item__meta:focus:before{

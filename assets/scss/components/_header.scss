@@ -55,6 +55,11 @@
     }
 }
 
+.site-header .site-header__logo a svg{
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
 
 .action-bar, .action-bar__menu--main, .action-bar__menu--sub{
     background: $color-main;

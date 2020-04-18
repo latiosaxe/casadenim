@@ -94,3 +94,21 @@
 .drawer-page-content:after{
     background: #21314dc2;
 }
+
+
+@media screen and (max-width: 768px) {
+    .site-footer {
+        padding: 70px 30px 80px;
+    }
+
+    .footer_grid {
+        flex-wrap: wrap;
+
+        .footer_grid__form {
+            margin-bottom: 40px;
+        }
+        .site-footer__linklist a {
+            padding-left: 0;
+        }
+    }
+}
