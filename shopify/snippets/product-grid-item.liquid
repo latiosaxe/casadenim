@@ -38,6 +38,7 @@
               {%- assign tela = false -%}
               {%- assign fit = false -%}
               {%- assign color = false -%}
+              {%- assign mezclilla = false -%}
               {%- for tag in product.tags -%}
                 {% if tag contains 'tela:' %}
                   {%- assign tela = tag | remove: 'tela:' -%}
@@ -47,6 +48,9 @@
                 {% endif %}
                 {% if tag contains 'color:' %}
                   {%- assign color = tag | remove: 'color:' -%}
+                {% endif %}
+                {% if tag contains 'mezclilla:' %}
+                  {%- assign mezclilla = tag | remove: 'mezclilla:' -%}
                 {% endif %}
               {%- endfor -%}
 
@@ -60,6 +64,9 @@
                 <p><strong>Color:</strong> {{ color }}</p>
                 {% endif %}
                 {% if tela %}
+                <p><strong>Tipo de Tela:</strong> {{ tela }}</p>
+                {% endif %}
+                {% if mezclilla %}
                 <p><strong>Mezclilla:</strong> {{ tela }}</p>
                 {% endif %}
               </div>

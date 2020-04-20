@@ -155,19 +155,14 @@
       </footer>
     </form>
   {% else %}
-    {% comment %}
-      The cart is empty
-    {% endcomment %}
     <div class="text-center">
       <h1>{{ 'cart.general.title' | t }}</h1>
-      <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
+      <p class="cart--empty-message">Aún no tienes productos en el carrito</p>
       <p class="cart--cookie-message">{{ 'cart.general.cookies_required' | t }}</p>
       <p class="cart--continue-browsing">{{ 'cart.general.continue_browsing_html' | t: link: routes.all_products_collection_url }}</p>
     </div>
   {% endif %}
 </div>
-
-
 
 {% schema %}
 {
